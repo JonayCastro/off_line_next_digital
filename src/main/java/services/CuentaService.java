@@ -12,5 +12,6 @@ public interface CuentaService {
 	List<MovimientoDto> consultarMovimientos(Long numeroCuenta);
 	Boolean retirarSaldo(Integer cantidad);
 	Boolean transferirSaldo(CuentaDto cuentaOrigen, CuentaDto cuentaDestino, Integer cantidad);
+	Boolean ingresarSaldo(OperacionDto operacion);
 
 }

@@ -20,8 +20,16 @@ public class CuentaServiceImpl implements CuentaService{
 	@Override
 	public Boolean consultarSaldo(final OperacionDto operacion) {
 		CuentaEntity cuentaEntity = cuentaDao.getCuentaByNumeroDeTarjeta(operacion.getNumeroTarjeta());
+		if(cuentaEntity == null) {
+			//TODO: Lanzar excepcion
+			System.out.print("Cuenta no encontrada");
+		}
 		Integer saldoCuenta = cuentaEntity.getSaldoCuenta();
 		Integer cantidadSolicitada = operacion.getCantidad();
+		if(saldoCuenta > cantidadSolicitada) {
+			cuentaEntity.setSaldoCuenta(saldoCuenta =- cantidadSolicitada); 
+			cuentaDao.save(cuentaEntity);
+		}
 		return saldoCuenta > cantidadSolicitada;
 	}
 
@@ -40,6 +48,16 @@ public class CuentaServiceImpl implements CuentaService{
 	@Override
 	public List<MovimientoDto> consultarMovimientos(final Long numeroCuenta) {
 		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean ingresarSaldo(OperacionDto operacion) {
+		CuentaEntity cuentaEntity = cuentaDao.getCuentaByNumeroDeTarjeta(operacion.getNumeroTarjeta());
+		Integer cantidadIngresada = operacion.getCantidad();
+		Integer saldoCuenta = cuentaEntity.getSaldoCuenta();
+		cuentaEntity.setSaldoCuenta(saldoCuenta =+ cantidadIngresada);
+		cuentaDao.save(cuentaEntity);
 		return null;
 	}
 

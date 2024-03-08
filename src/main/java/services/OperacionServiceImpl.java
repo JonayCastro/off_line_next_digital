@@ -26,16 +26,13 @@ public class OperacionServiceImpl implements OperacionService{
 	@Override
 	public Boolean sacarDinero(OperacionDto operacion) {
 		consultaDePin(operacion);
-		
-		
-		
-		return null;
+		return cuentaService.consultarSaldo(operacion);
 	}
 
 	@Override
 	public Boolean ingresar(OperacionDto operacion) {
-		// TODO Auto-generated method stub
-		return null;
+		consultaDePin(operacion);
+		return cuentaService.ingresarSaldo(operacion);
 	}
 
 	@Override
