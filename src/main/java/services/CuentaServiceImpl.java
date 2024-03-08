@@ -9,7 +9,7 @@ public class CuentaServiceImpl implements CuentaService{
 
 	@Override
 	public Integer consultarSaldo(final Long numeroCuenta) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 

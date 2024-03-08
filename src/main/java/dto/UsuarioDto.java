@@ -14,5 +14,4 @@ public class UsuarioDto {
 	private String dni;
 	private TarjetaDto tarjetasUsuario;
 	private CuentaDto cuenta;
-
 }
