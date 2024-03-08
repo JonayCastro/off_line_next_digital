@@ -10,8 +10,6 @@ import dto.MovimientoDto;
 import dto.OperacionDto;
 import entities.CuentaEntity;
 
-
-
 public class CuentaServiceImpl implements CuentaService{
 	
 	@Autowired
