@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class CuentaDto {
 	
 	private String nombreCuenta;
-	private String saldoCuenta;
+	private Integer saldoCuenta;
 	private Long numeroCuenta;
 	private List<MovimientoDto> movimientos = new ArrayList<>();
 	private UsuarioDto usuario;

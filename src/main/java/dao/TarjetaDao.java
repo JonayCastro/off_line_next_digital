@@ -8,5 +8,5 @@ import entities.TarjetaEntity;
 @Repository(value = "tarjetaDao")
 public interface TarjetaDao extends JpaRepository<TarjetaEntity, Long>{
 
-	TarjetaEntity getTarjetaByNumeroTarjeta(String numeroTarjeta);
+	TarjetaEntity getTarjetaByNumeroTarjeta(Long numeroTarjeta);
 }

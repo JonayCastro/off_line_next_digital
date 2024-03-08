@@ -14,7 +14,7 @@ public class OperacionDto {
 	private Integer cantidad;
 	private String destinatario;
 	private String remitente;
-	private String numeroTarjeta;
+	private Long numeroTarjeta;
 	private UsuarioDto usuario;
 	private Integer pin;
 }

@@ -13,7 +13,7 @@ public class TarjetaServiceImpl implements TarjetaService{
 
 	@Override
 	public Boolean consultarPin(OperacionDto operacion) {
-		String numeroTarjeta = operacion.getNumeroTarjeta();
+		Long numeroTarjeta = operacion.getNumeroTarjeta();
 		TarjetaEntity tarjetaEntity= tarjetaDao.getTarjetaByNumeroTarjeta(numeroTarjeta);
 		Integer pinTarjetaEntity = tarjetaEntity.getPin();
 		Integer pinOperacion = operacion.getPin();

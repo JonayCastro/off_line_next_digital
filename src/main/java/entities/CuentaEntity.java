@@ -40,7 +40,7 @@ public class CuentaEntity {
 	private UsuarioEntity usuario;
 	
 	@Column(name = "saldo")
-	private String saldoCuenta;
+	private Integer saldoCuenta;
 	
 	@Column(name = "numero_cuenta")
 	private Long numeroCuenta;
